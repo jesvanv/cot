@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ccba93;
+}
+
+p {
+  font: 1em Arial, sans-serif;
+}
+
+h1, h2 {
+    font-family: Arial, sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.white {
+  color: white;
+}
+
+.product-type {
+  padding: 1em 125px;
+  margin: 0 -125px;
+}
+
+.product-type p {
+  color: white;
+}
+
+.product-type h2 {
+  color: #fd9200;
+}
+
+.product-type:nth-of-type(2n) {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.cot-blue {
+  color: #3467b8;
+}
+
+.main-head {
+  font: 2em 'Montserrat', Arial, sans-serif;
+  color: white;
+}
+
+.main-col {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 2em 125px;
+  width: 70%;
+  background: url('../images/blue_sky.jpg') no-repeat;
+  background-color: #bee9fa;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.brand-logo {
+  width: 300px;
+  margin: 1em;
+  float: right;
+}
+
+.product-right {
+  width: 300px;
+  float: right;
+  margin-right: -62px;
+}
+
+.sideart {
+  position: absolute;
+  height: 100%;
+  width: 70px;
+  opacity: 0.15;
+}
+
+.sideart-left {
+  left: 0;
+  background: url('../images/sideart-left.png') 0 0/contain repeat-y;
+}
+
+.sideart-right {
+  right: 0;
+  background: url('../images/sideart-right.png') 0 0/contain repeat-y;
+}
