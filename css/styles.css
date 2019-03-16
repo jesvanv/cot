@@ -176,3 +176,26 @@ h1, h2 {
 .skew-left {
   transform: rotate(-15deg)
 }
+
+@media(max-width: 1275px) {
+
+  .main-col {
+    padding: 4em 1.5em;
+  }
+
+  .brand-logo {
+    display: block;
+    margin: 1em auto;
+    float: none;
+  }
+
+  .main-head {
+    text-align: center;
+  }
+
+  .product-type {
+    margin: 0 -1.5em;
+    padding: 1em 2em;
+  }
+
+}
