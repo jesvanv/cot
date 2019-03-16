@@ -13,6 +13,7 @@ body, html {
 
 body {
   background-color: #ccba93;
+  height: auto;
 }
 
 a {
@@ -58,46 +59,48 @@ h1, h2 {
   background: url('../images/sideart-right.png') 0 0/contain repeat-y;
 }
 
-.top-nav {
-  position: fixed;
+.nav {
   display: flex;
+  font: bold 1.1em Arial, sans-serif;
+  color: white;
   align-items: center;
-  top: 0;
+  justify-content: space-between;
   left: 50%;
   transform: translate(-50%, 0);
   height: 3em;
   background: #459945;
   width: calc(70% + 25px);
+  z-index: 999;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
   border-bottom: 8px solid #66c366;
   box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
 }
 
-.top-nav a {
-  font: bold 1.1em Arial, sans-serif;
+.nav a {
+  color: white;
   margin: auto;
-  color: white;
+  transition: color 0.2s;
 }
 
-a.email {
-  font: bold 1em Arial, sans-serif;
+.nav a:hover {
   color: orange;
-  text-align: center;
-  display: block;
-  margin: 0.5em auto;
-  width: 10em;
-  border: 2px solid orange;
-  padding: 0.5em 0.1em;
-  border-radius: 1em;
 }
 
-a.email:hover {
-  background: orange;
-  color: white;
-  border-color: white;
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  border-top: 8px solid #66c366;
+  box-shadow: 3px -3px 3px rgba(0,0,0,0.3);
+  z-index: 999;
 }
 
-a:hover {
-  color: orange;
+.bottom-nav span {
+  margin: auto;
 }
 
 .main-head {
@@ -168,4 +171,8 @@ a:hover {
   width: 300px;
   float: left;
   margin: 0 3em 0 -100px;
+}
+
+.skew-left {
+  transform: rotate(-15deg)
 }

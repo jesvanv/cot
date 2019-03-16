@@ -14,14 +14,16 @@
 
 <body>
   <!-- <script src="js/scripts.js"></script> -->
-  <div class="top-nav">
+  <div class="nav top-nav">
     <a href=''>About Us</a>
     <a href=''>Farm to Bowl</a>
   </div>
   <div class="main-col">
     <div class="sideart sideart-left"></div>
     <div class="sideart sideart-right"></div>
-    <img src="images/cot_logo.svg" id="main-logo" class="brand-logo"/>
+
+    <img src="images/cot_logo_rev.svg" id="main-logo" class="brand-logo"/>
+
     <h1 class='main-head'><span class='nobreaking'>Chasing Our Tails</span> produces premium, natural, quality products for your pets!</h1>
 
     <p class="white">Our line is single ingredient and preservative-free; your pets deserve the best.
@@ -34,7 +36,6 @@
 
         <div class='product-type'>
           <img src='images/smoke_bones_1.png' class='product-right' />
-
           <h2>Smoked Bones</h2>
           <p>Barbecue has gone to the dogs! What dog can resist the tempting taste of smoked marrow bones or pig ears?
             We hardwood smoke our products to 145 degrees. Our proven process kills bacteria but does not compromise the integrity of the bone (no splintering or cracking!) or causing the marrow to melt out.
@@ -43,6 +44,7 @@
           </div>
 
           <div class='product-type'>
+            <img src='images/pork_heart_label.png' class='product-left skew-left' />
             <h2>Dehydrated Treats</h2>
             <p>Our treats are formulated to appeal to dogs of all ages. They are exceptional for everything from puppy training to senior dogs with dental issues. The treats are 100% organ or striated muscle that is carefully hand-trimmed of extra fat. They are expertly dehydrated to retain natural color, smell, and taste that dogs love.  Our sweet potato treats are sourced fresh from US farms. As always, our products contain ZERO fillers, artificial colors, flavors or preservatives. All of our treats are packaged in heat-sealed, high barrier pouches to maintain freshness and product integrity.</p>
           </div>
@@ -59,26 +61,35 @@
           </div>
 
           <h2 class="bottom-head">Chasing Our Tails is committed to giving pets everything they need and crave as a healthy addition to their daily diet!</h2>
-          <script type="text/javascript" language="javascript">
-          { encoded = "fDfFx@FfSfjSZ61d7jp.76l"
-            key = "156vFDJLPVgwrjRyu89fXmS2Na4HW3qcQkOZAGsdboMnl0EBxUTYtz7hCIeiKp"
-            shift = encoded.length
-            link = ""
-            for (i=0; i<encoded.length; i++) {
-              if (key.indexOf(encoded.charAt(i)) == -1) {
-                ltr = encoded.charAt(i)
-                link += (ltr)
-              }
-              else {
-                ltr = (key.indexOf(encoded.charAt(i)) - shift + key.length) % key.length
-                link += (key.charAt(ltr))
-              }
-            }
-          document.write("<a href='mailto:" + link + "' class='email'>Email Us Today!</a>")
-          }
-          </script><noscript>Sorry, you need Javascript to email me.</noscript>
 
 
         </div>
+        <div class="nav bottom-nav"><span>28 Hampshire Drive • Hudson, NH • 03051</span><span>(866) 967-0152</span> </div>
+
       </body>
+
+      <script type="text/javascript" language="javascript">
+      { bottomNav = document.getElementsByClassName('bottom-nav')[0];
+        encoded = "fDfFx@FfSfjSZ61d7jp.76l"
+        key = "156vFDJLPVgwrjRyu89fXmS2Na4HW3qcQkOZAGsdboMnl0EBxUTYtz7hCIeiKp"
+        shift = encoded.length
+        link = ""
+        for (i=0; i<encoded.length; i++) {
+          if (key.indexOf(encoded.charAt(i)) == -1) {
+            ltr = encoded.charAt(i)
+            link += (ltr)
+          }
+          else {
+            ltr = (key.indexOf(encoded.charAt(i)) - shift + key.length) % key.length
+            link += (key.charAt(ltr))
+          }
+        }
+        emailLink = document.createElement('a');
+        emailLink.innerHTML = "<a href='mailto:" + link + "' id='email' class='email'>Email Us Today!</a>";
+      bottomNav.append(emailLink)
+      }
+      </script>
+
+      <noscript>Sorry, you need Javascript to email me.</noscript>
+
       </html>
