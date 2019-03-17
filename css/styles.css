@@ -88,10 +88,9 @@ h1, h2 {
 
 .top-nav p {
   font: bold 1.5em 'Montserrat', sans-serif;
-  width: calc(100% - 200px);
   text-align: right;
-  opacity: 0.7;
-  margin: 0 0 0.8em 1em;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+  margin: auto 170px auto 1em;
 }
 
 .nav a {
@@ -142,7 +141,7 @@ img.dog-bowl {
 
 .main-col {
   margin: 0 auto;
-  padding: 90px 125px 4em;
+  padding: 125px 125px 4em;
   width: 70%;
   background: url('../images/blue_sky.jpg') no-repeat;
   background-color: #bee9fa;
@@ -182,8 +181,16 @@ img.dog-bowl {
 }
 
 .brand-logo {
-  width: 250px;
-  margin: 1em -2em 0 2em;
+  position: relative;
+  top: 65px;
+  width: 600px;
+  margin: 2em 0 0 2em;
+  float: left;
+}
+
+.made-in-usa {
+  width: 100px;
+  margin: 3em 1em;
   float: right;
 }
 
