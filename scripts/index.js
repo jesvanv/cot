@@ -1,5 +1,5 @@
 var bottomNav = document.getElementsByClassName('bottom-nav')[0];
-var popup = document.getElementById('popup');
+var popupOverlay = document.getElementById('popup-overlay');
 var encoded = "fDfFx@FfSfjSZ61d7jp.76l"
 var key = "156vFDJLPVgwrjRyu89fXmS2Na4HW3qcQkOZAGsdboMnl0EBxUTYtz7hCIeiKp"
 var shift = encoded.length
@@ -19,12 +19,12 @@ emailLink.innerHTML = "<a href='mailto:" + link + "' id='email' class='email'>Em
 bottomNav.append(emailLink)
 
 var showPopup = function() {
-  var popupClasses = popup.classList;
-  if(popupClasses.contains('showing')) {
-    popup.classList.remove('showing');
+  var popupOverlayClasses = popupOverlay.classList;
+  if(popupOverlayClasses.contains('showing')) {
+    popupOverlayClasses.remove('showing');
   }
   else {
-    popup.classList.add('showing')
+    popupOverlayClasses.add('showing')
   }
   console.log('showing popup', popup.classList)
 }

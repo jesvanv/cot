@@ -199,17 +199,28 @@ img.dog-bowl {
   transform: rotate(-15deg)
 }
 
-.popup {
+.popup-overlay {
   display: none;
 }
 
-.popup.showing {
+.popup {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+}
+
+.popup-overlay.showing {
   display: block;
   position: fixed;
-  z-index: 999;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
 }
 
 @media(max-width: 1275px) {
