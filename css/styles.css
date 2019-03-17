@@ -135,6 +135,7 @@ img.dog-bowl {
 }
 
 .bottom-head {
+  margin: 1rem;
   text-align: center;
   color: rgb(55, 107, 184);
 }
@@ -234,6 +235,34 @@ img.dog-bowl {
   margin: 1em auto;
 }
 
+.contact {
+  font-family: Arial, sans-serif;
+  width: 20%;
+  padding: 0.75em;
+  text-align: center;
+  margin: -1rem 1em 1em;
+  color: white;
+  float: right;
+  border-radius: 0 0 1em 1em;
+}
+
+.contact h1 {
+  font: bold 1em 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+.contact p {
+  margin: 0 auto;
+}
+
+.contact.wholesale {
+  background: #37b578;
+}
+
+.contact.consumer {
+  background: #c49c37;
+}
+
 img.fbook {
   width: 45px;
   margin-right: 1em;
@@ -242,6 +271,10 @@ img.fbook {
 .fbook-text {
   font: bold 1em 'Montserrat', sans-serif;
   color: rgb(100, 100, 100);
+}
+
+.wider-area {
+  margin: 0 -6em;
 }
 
 @media(max-width: 1275px) {
@@ -263,6 +296,10 @@ img.fbook {
   .product-type {
     margin: 0 -1.5em;
     padding: 1em 2em;
+  }
+
+  .wider-area {
+    margin: 0;
   }
 
 }
