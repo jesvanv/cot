@@ -115,13 +115,17 @@ img.dog-bowl {
   position: absolute;
   bottom: 0;
   transform: translate(-50%, 0);
-  border-top: 8px solid #66c366;
-  box-shadow: 3px -3px 3px rgba(0,0,0,0.3);
+  background-color: transparent;
+  background: url('../images/grass.svg') repeat-x;
+  height: 85px;
+  width: 100vw;
   z-index: 999;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  align-items: flex-end;
 }
 
-.bottom-nav span {
-  margin: auto;
+.bottom-nav span, .bottom-nav a {
+  margin: 1em auto;
 }
 
 .main-head {
@@ -221,6 +225,23 @@ img.dog-bowl {
   width: 100vw;
   height: 100vh;
   background: rgba(0,0,0,0.6);
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em auto;
+}
+
+img.fbook {
+  width: 45px;
+  margin-right: 1em;
+}
+
+.fbook-text {
+  font: bold 1em 'Montserrat', sans-serif;
+  color: rgb(100, 100, 100);
 }
 
 @media(max-width: 1275px) {
