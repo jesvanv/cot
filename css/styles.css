@@ -75,9 +75,23 @@ h1, h2 {
 
 .top-nav {
   position: fixed;
+  align-items: flex-end;
   top: 0;
+  height: 95px;
   border-bottom: 8px solid #66c366;
   box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.top-nav:hover {
+  cursor: pointer;
+}
+
+.top-nav p {
+  font: bold 1.5em 'Montserrat', sans-serif;
+  width: calc(100% - 200px);
+  text-align: right;
+  opacity: 0.7;
+  margin: 0 0 0.8em 1em;
 }
 
 .nav a {
@@ -88,6 +102,13 @@ h1, h2 {
 
 .nav a:hover {
   color: orange;
+}
+
+img.dog-bowl {
+  position: absolute;
+  width: 135px;
+  right: 25px;
+  bottom: -43px;
 }
 
 .bottom-nav {
@@ -116,7 +137,7 @@ h1, h2 {
 
 .main-col {
   margin: 0 auto;
-  padding: 4em 125px;
+  padding: 90px 125px 4em;
   width: 70%;
   background: url('../images/blue_sky.jpg') no-repeat;
   background-color: #bee9fa;
@@ -170,11 +191,25 @@ h1, h2 {
 .product-left {
   width: 300px;
   float: left;
-  margin: 0 3em 0 -100px;
+  padding-bottom: 2em;
+  margin: 0 2em 0 -100px;
 }
 
 .skew-left {
   transform: rotate(-15deg)
+}
+
+.popup {
+  display: none;
+}
+
+.popup.showing {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
 }
 
 @media(max-width: 1275px) {

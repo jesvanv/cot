@@ -13,10 +13,10 @@
 </head>
 
 <body>
-  <!-- <script src="js/scripts.js"></script> -->
-  <div class="nav top-nav">
-    <a href=''>About Us</a>
-    <a href=''>Farm to Bowl</a>
+    <img id="popup" src="images/petbowl_ad.pdf" alt="Farm to Pet Bowl Revolution Ad" class="popup">
+  <div class="nav top-nav" onclick="showPopup()">
+    <img src="images/dog_bowl.png" class="dog-bowl" />
+    <p>This IS the farm to pet bowl revolution</p>
   </div>
   <div class="main-col">
     <div class="sideart sideart-left"></div>
@@ -68,27 +68,7 @@
 
       </body>
 
-      <script type="text/javascript" language="javascript">
-      { bottomNav = document.getElementsByClassName('bottom-nav')[0];
-        encoded = "fDfFx@FfSfjSZ61d7jp.76l"
-        key = "156vFDJLPVgwrjRyu89fXmS2Na4HW3qcQkOZAGsdboMnl0EBxUTYtz7hCIeiKp"
-        shift = encoded.length
-        link = ""
-        for (i=0; i<encoded.length; i++) {
-          if (key.indexOf(encoded.charAt(i)) == -1) {
-            ltr = encoded.charAt(i)
-            link += (ltr)
-          }
-          else {
-            ltr = (key.indexOf(encoded.charAt(i)) - shift + key.length) % key.length
-            link += (key.charAt(ltr))
-          }
-        }
-        emailLink = document.createElement('a');
-        emailLink.innerHTML = "<a href='mailto:" + link + "' id='email' class='email'>Email Us Today!</a>";
-      bottomNav.append(emailLink)
-      }
-      </script>
+      <script src="scripts/index.js" type="text/javascript"></script>
 
       <noscript>Sorry, you need Javascript to email me.</noscript>
 
