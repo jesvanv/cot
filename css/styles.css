@@ -376,4 +376,9 @@ img.fbook {
     margin: 0 auto;
   }
 
+  .fbook-text {
+    display: block;
+    font-size: 0.9em;
+  }
+
 }
