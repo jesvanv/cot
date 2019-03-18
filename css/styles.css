@@ -382,3 +382,13 @@ img.fbook {
   }
 
 }
+
+@media(max-width: 1225px) {
+
+  .brand-logo {
+    display: block;
+    margin: 1em auto;
+    float: none;
+  }
+
+}
