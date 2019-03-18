@@ -75,7 +75,7 @@ h1, h2 {
 
 .top-nav {
   position: fixed;
-  align-items: flex-end;
+  align-items: center;
   top: 0;
   height: 95px;
   border-bottom: 8px solid #66c366;
@@ -88,9 +88,9 @@ h1, h2 {
 
 .top-nav p {
   font: bold 1.5em 'Montserrat', sans-serif;
+  width: calc(100% - 200px);
   text-align: right;
-  text-shadow: 0 0 8px rgba(0,0,0,0.7);
-  margin: auto 170px auto 1em;
+  text-shadow: 0 0 3px rgba(0,0,0,0.7);
 }
 
 .nav a {
@@ -141,7 +141,7 @@ img.dog-bowl {
 
 .main-col {
   margin: 0 auto;
-  padding: 125px 125px 4em;
+  padding: 90px 125px 4em;
   width: 70%;
   background: url('../images/blue_sky.jpg') no-repeat;
   background-color: #bee9fa;
@@ -180,17 +180,14 @@ img.dog-bowl {
   color: #275bc7;
 }
 
-.brand-logo {
-  position: relative;
-  top: 65px;
-  width: 600px;
-  margin: 2em 0 0 2em;
-  float: left;
+.made-in-usa {
+  width: 80px;
+  margin: 0 auto;
 }
 
-.made-in-usa {
-  width: 100px;
-  margin: 3em 1em;
+.brand-logo {
+  width: 250px;
+  margin: 1em -2em 0 2em;
   float: right;
 }
 
@@ -242,6 +239,10 @@ img.dog-bowl {
   margin: 1em auto;
 }
 
+.social-container a {
+  margin: 0 auto;
+}
+
 .contact {
   font-family: Arial, sans-serif;
   width: 20%;
@@ -284,16 +285,68 @@ img.fbook {
   margin: 0 -6em;
 }
 
-@media(max-width: 1275px) {
+@media(max-width: 800px) {
 
   .main-col {
-    padding: 4em 1.5em;
+    padding: 6em 1.5em 8em;
+    width: 90%;
   }
 
   .brand-logo {
     display: block;
     margin: 1em auto;
     float: none;
+  }
+
+  .main-head {
+    font-size: 1.8em;
+  }
+
+  .top-nav {
+    width: 100vw;
+  }
+
+  .top-nav p {
+    font-size: 1em;
+    margin: 0 160px 0 auto;
+  }
+
+  .bottom-nav {
+    display: block;
+    height: 125px;
+    background-size: cover;
+    padding-top: 2.5em;
+    text-align: center;
+  }
+
+  .bottom-nav span:first-of-type {
+    display: block;
+    margin: 0.2em auto;
+    text-align: center;
+  }
+
+  .bottom-nav span, .bottom-nav a {
+    display: inline-block;
+    margin: 0 1em;
+  }
+
+  .contact {
+    width: auto;
+    float: none;
+    margin-top: 0;
+    position: relative;
+    z-index: 999;
+  }
+
+  .popup {
+    width: 90%;
+    height: auto;
+  }
+
+  .contact.consumer {
+    margin-top: -2em;
+    padding-top: 2em;
+    z-index: 998;
   }
 
   .main-head {
@@ -307,6 +360,20 @@ img.fbook {
 
   .wider-area {
     margin: 0;
+  }
+
+  .nobreaking {
+    white-space: normal;
+  }
+
+  .bottom-head {
+    font-size: 1.2em;
+  }
+
+  .product-right, .product-left {
+    display: block;
+    float: none;
+    margin: 0 auto;
   }
 
 }
