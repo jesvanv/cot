@@ -59,6 +59,24 @@ h1, h2 {
   background: url('../images/sideart-right.png') 0 0/contain repeat-y;
 }
 
+.brand-logo-band {
+  position: fixed;
+  width: 70%;
+  height: 165px;
+  background: #285cc2;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 800;
+}
+
+.brand-logo {
+  position: fixed;
+  width: 50%;
+  top: 5px;
+  left: 19%;
+  z-index: 1200;
+}
+
 .nav {
   display: flex;
   font: bold 1.1em Arial, sans-serif;
@@ -76,9 +94,10 @@ h1, h2 {
 .top-nav {
   position: fixed;
   align-items: center;
-  top: 0;
-  height: 95px;
-  border-bottom: 8px solid #66c366;
+  top: 160px;
+  padding: 1em 0;
+  border-top: 3px solid #66c366;
+  border-bottom: 3px solid #66c366;
   box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
 }
 
@@ -105,9 +124,9 @@ h1, h2 {
 
 img.dog-bowl {
   position: absolute;
-  width: 135px;
+  width: 150px;
   right: 25px;
-  bottom: -43px;
+  bottom: -42px;
 }
 
 .bottom-nav {
@@ -141,7 +160,7 @@ img.dog-bowl {
 
 .main-col {
   margin: 0 auto;
-  padding: 90px 125px 4em;
+  padding: 200px 125px 4em;
   width: 70%;
   background: url('../images/blue_sky.jpg') no-repeat;
   background-color: #bee9fa;
@@ -183,12 +202,6 @@ img.dog-bowl {
 .made-in-usa {
   width: 80px;
   margin: 0 auto;
-}
-
-.brand-logo {
-  width: 250px;
-  margin: 1em -4em 0 2em;
-  float: right;
 }
 
 .product-right {
@@ -288,14 +301,24 @@ img.fbook {
 @media(max-width: 800px) {
 
   .main-col {
-    padding: 6em 1.5em 8em;
+    padding: 12em 1.5em 8em;
+    width: 90%;
+  }
+
+  .sideart {
+    width: 50px;
+  }
+
+  .brand-logo-band {
     width: 90%;
   }
 
   .brand-logo {
-    display: block;
-    margin: 1em auto;
-    float: none;
+  	position: fixed;
+  	width: 90%;
+    max-width: 460px;
+  	top: 5px;
+  	left: 2%;
   }
 
   .main-head {
@@ -304,10 +327,17 @@ img.fbook {
 
   .top-nav {
     width: 100vw;
+    top: 110px;
+    padding: 1.5em 0;
+  }
+
+  img.dog-bowl {
+    width: 120px;
+    bottom: -34px;
   }
 
   .top-nav p {
-    font-size: 1em;
+    font-size: 0.9em;
     margin: 0 160px 0 auto;
   }
 
@@ -374,6 +404,8 @@ img.fbook {
     display: block;
     float: none;
     margin: 0 auto;
+    width: 75%;
+    padding-bottom: 0;
   }
 
   .fbook-text {
@@ -381,6 +413,17 @@ img.fbook {
     font-size: 0.9em;
   }
 
+}
+
+@media(max-width: 1140px) {
+
+  .top-nav {
+    padding: 2em 0;
+  }
+
+  .main-col {
+    padding-top: 240px;
+  }
 }
 
 @media(max-width: 1225px) {
