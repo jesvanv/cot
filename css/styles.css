@@ -365,7 +365,7 @@ img.fbook {
     float: none;
     margin-top: 0;
     position: relative;
-    z-index: 999;
+    z-index: 750;
   }
 
   .popup {
@@ -376,7 +376,7 @@ img.fbook {
   .contact.consumer {
     margin-top: -2em;
     padding-top: 2em;
-    z-index: 998;
+    z-index: 749;
   }
 
   .main-head {
