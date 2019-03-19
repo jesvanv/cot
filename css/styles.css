@@ -56,7 +56,7 @@ h1, h2 {
 
 .sideart-right {
   right: 0;
-  background: url('../images/sideart-right.png') 0 0/contain repeat-y;
+  background: url('../images/sideart-right.png') 100% 0/contain repeat-y;
 }
 
 .brand-logo-band {
