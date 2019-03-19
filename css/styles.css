@@ -74,7 +74,7 @@ h1, h2 {
   width: 50%;
   top: 5px;
   left: 19%;
-  z-index: 1200;
+  z-index: 1000;
 }
 
 .nav {
@@ -237,7 +237,7 @@ img.dog-bowl {
 .popup-overlay.showing {
   display: block;
   position: fixed;
-  z-index: 1000;
+  z-index: 1001;
   top: 0;
   left: 0;
   width: 100vw;
