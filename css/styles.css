@@ -477,9 +477,14 @@ img.fbook {
     text-align: left;
   }
 
+
   .duck-promo p, .duck-promo button {
     margin: 0.5em;
-    max-width: 42%;
+    max-width: 54%;
+  }
+
+  .duck-promo button {
+    max-width: 75%;
   }
 
   .duck-promo .head-image {
@@ -487,8 +492,8 @@ img.fbook {
     float: right;
     right: -40%;
     left: auto;
-    width: 65%;
-    top: 50%;
+    width: 54%;
+    top: 35%;
   }
 
   .main-col > p, .main-head {
