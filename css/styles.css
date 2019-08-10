@@ -105,7 +105,7 @@ h1, h2 {
   color: #41413f;
 }
 
-.duck-promo > button {
+.duck-promo button {
   font: 0.9em 'Montserrat', sans-serif;
   border: 3px solid #d65a5d;
   padding: 0.5em 1em;
@@ -114,7 +114,11 @@ h1, h2 {
   background: #d65a5d;
 }
 
-.duck-promo > button:hover {
+.duck-promo button a {
+  color: #FFFFFF
+}
+
+.duck-promo button:hover {
   border: 3px solid #FFFFFF;
   cursor: pointer;
 }
