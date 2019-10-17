@@ -3,6 +3,8 @@ var key = "156vFDJLPVgwrjRyu89fXmS2Na4HW3qcQkOZAGsdboMnl0EBxUTYtz7hCIeiKp"
 var shift = encoded.length
 var link = ""
 
+var popupOverlay = document.getElementById('popup-overlay');
+
 for (i=0; i<encoded.length; i++) {
   if (key.indexOf(encoded.charAt(i)) == -1) {
     ltr = encoded.charAt(i)
