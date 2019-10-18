@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
 * {
   box-sizing: border-box;
 }
@@ -14,6 +13,7 @@ body, html {
 body {
   background-color: #ccba93;
   height: auto;
+  overflow-x: hidden;
 }
 
 a {
@@ -26,7 +26,7 @@ p {
 }
 
 h1, h2 {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .bold {
@@ -48,15 +48,20 @@ h1, h2 {
   width: 70px;
   opacity: 0.45;
 }
+@media (max-width: 415px) {
+  .sideart {
+    width: 50px;
+  }
+}
 
 .sideart-left {
   left: 0;
-  background: url('../images/sideart-left.png') 0 0/contain repeat-y;
+  background: url("../images/sideart-left.png") 0 0/contain repeat-y;
 }
 
 .sideart-right {
   right: 0;
-  background: url('../images/sideart-right.png') 100% 0/contain repeat-y;
+  background: url("../images/sideart-right.png") 100% 0/contain repeat-y;
 }
 
 .brand-logo-band {
@@ -68,6 +73,11 @@ h1, h2 {
   transform: translate(-50%, 0);
   z-index: 800;
 }
+@media (max-width: 415px) {
+  .brand-logo-band {
+    width: 90%;
+  }
+}
 
 .brand-logo {
   position: fixed;
@@ -76,51 +86,155 @@ h1, h2 {
   left: 19%;
   z-index: 1000;
 }
+@media (max-width: 415px) {
+  .brand-logo {
+    position: fixed;
+    width: 90%;
+    max-width: 460px;
+    top: 5px;
+    left: 2%;
+  }
+}
+@media (max-width: 1225px) {
+  .brand-logo {
+    display: block;
+    margin: 1em auto;
+    float: none;
+  }
+}
 
-.duck-promo {
+.promo-callout {
   position: absolute;
   right: 230px;
   top: 360px;
   width: 15%;
   max-width: 215px;
   margin: 1em;
-  padding: 6em 0.5em 0.5em;
+  padding: 7.5em 0.5em 0.5em;
   background: #f8eab1;
   text-align: center;
   border-radius: 0 0 15px 15px;
 }
-
-.duck-promo .head-image {
+.promo-callout .image-one {
   position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100%;
+  top: -35%;
+  left: -8%;
+  width: 78%;
+  max-width: 215px;
+  transform: rotate(-10deg);
+}
+.promo-callout .image-two {
+  position: absolute;
+  top: -19%;
+  left: 25%;
+  width: 80%;
   max-width: 215px;
   border-radius: 50%;
-  transform: translate(-50%, -50%) rotate(15deg) ;
+  transform: rotate(10deg);
 }
-
-.duck-promo p {
+.promo-callout .image-three {
+  max-width: 100%;
+  top: 2.6em;
+  left: 0;
+  position: absolute;
+  border-radius: 5px;
+  transform: rotate(-4deg);
+  box-shadow: 0 0 8px;
+}
+.promo-callout p {
   font: 0.9em Arial, sans-serif;
   color: #41413f;
+  margin: 2.3em 0.5em 1em;
 }
-
-.duck-promo button {
-  font: 0.9em 'Montserrat', sans-serif;
+.promo-callout button {
+  font: 0.9em "Montserrat", sans-serif;
   border: 3px solid #d65a5d;
   padding: 0.5em 1em;
   border-radius: 5px;
   color: #FFFFFF;
   background: #d65a5d;
 }
-
-.duck-promo button a {
-  color: #FFFFFF
+.promo-callout button a {
+  color: #FFFFFF;
 }
-
-.duck-promo button:hover {
+.promo-callout button:hover {
   border: 3px solid #FFFFFF;
   cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .promo-callout {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: none;
+    padding: 1em;
+    border-radius: 10px 30px 10px 10px;
+    text-align: left;
+    margin: 0 auto 0 0.2em;
+    width: 90%;
+  }
+  .promo-callout .image-one {
+    top: -13%;
+    width: 28%;
+    left: 80%;
+    transform: rotate(10deg);
+  }
+  .promo-callout .image-two {
+    top: 3%;
+    width: 30%;
+    left: 57%;
+  }
+  .promo-callout .image-three {
+    max-width: 35%;
+    left: 63%;
+    top: 63%;
+  }
+  .promo-callout p, .promo-callout button {
+    margin: 0.5em;
+    max-width: 54%;
+  }
+  .promo-callout button {
+    max-width: 55%;
+  }
+}
+@media (max-width: 415px) {
+  .promo-callout {
+    width: 100%;
+  }
+  .promo-callout .image-one {
+    top: -7%;
+    width: 44%;
+    left: 65%;
+    transform: rotate(10deg);
+    width: 38%;
+  }
+  .promo-callout .image-two {
+    top: 33%;
+    width: 48%;
+    left: 60%;
+  }
+  .promo-callout .image-three {
+    max-width: 50%;
+    left: 60%;
+    top: 73%;
+  }
+}
+@media (width: 768px) {
+  .promo-callout .image-one {
+    left: 80%;
+    transform: rotate(10deg);
+    width: 38%;
+  }
+  .promo-callout .image-two {
+    top: 13%;
+    width: 40%;
+    left: 54%;
+  }
+  .promo-callout .image-three {
+    max-width: 45%;
+    left: 63%;
+    top: 56%;
+  }
 }
 
 .nav {
@@ -136,6 +250,14 @@ h1, h2 {
   width: calc(70% + 25px);
   z-index: 999;
 }
+.nav a {
+  color: white;
+  margin: auto;
+  transition: color 0.2s;
+}
+.nav a:hover {
+  color: orange;
+}
 
 .top-nav {
   position: fixed;
@@ -144,28 +266,40 @@ h1, h2 {
   padding: 1em 0;
   border-top: 3px solid #66c366;
   border-bottom: 3px solid #66c366;
-  box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
-
 .top-nav:hover {
   cursor: pointer;
 }
-
 .top-nav p {
-  font: bold 1.5em 'Montserrat', sans-serif;
+  font: bold 1.5em "Montserrat", sans-serif;
   width: calc(100% - 200px);
   text-align: right;
-  text-shadow: 0 0 3px rgba(0,0,0,0.7);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
-
-.nav a {
-  color: white;
-  margin: auto;
-  transition: color 0.2s;
+@media (max-width: 415px) {
+  .top-nav {
+    width: 100vw;
+    top: 110px;
+    padding: 2.3em 0;
+  }
+  .top-nav p {
+    font-size: 0.9em;
+    margin: 0 160px 0 auto;
+  }
 }
-
-.nav a:hover {
-  color: orange;
+@media (min-width: 768px) and (max-width: 1024px) {
+  .top-nav {
+    padding: 2em 0;
+  }
+}
+@media (width: 1024px) {
+  .top-nav {
+    padding: 2.5em 0;
+  }
+  .top-nav p {
+    font-size: 1.35em;
+  }
 }
 
 img.dog-bowl {
@@ -174,81 +308,155 @@ img.dog-bowl {
   right: 25px;
   bottom: -42px;
 }
+@media (max-width: 415px) {
+  img.dog-bowl {
+    width: 120px;
+    bottom: -34px;
+  }
+}
 
 .bottom-nav {
   position: absolute;
   bottom: 0;
   transform: translate(-50%, 0);
   background-color: transparent;
-  background: url('../images/grass.svg') repeat-x;
+  background: url("../images/grass.svg") repeat-x;
   height: 85px;
   width: 100vw;
   z-index: 999;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
   align-items: flex-end;
 }
-
 .bottom-nav span, .bottom-nav a {
   margin: 1em auto;
 }
+@media (max-width: 415px) {
+  .bottom-nav {
+    display: block;
+    height: 125px;
+    background-size: cover;
+    padding-top: 2.5em;
+    text-align: center;
+  }
+  .bottom-nav span, .bottom-nav a {
+    display: inline-block;
+    margin: 0 1em;
+  }
+  .bottom-nav span:first-of-type {
+    display: block;
+    margin: 0.2em auto;
+    text-align: center;
+  }
+}
 
 .main-head {
-  font: 2.5em 'Montserrat', Arial, sans-serif;
+  font: 2.5em "Montserrat", Arial, sans-serif;
   color: white;
-  text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   max-width: 75%;
+}
+@media (max-width: 415px) {
+  .main-head {
+    font-size: 1.8em;
+    max-width: none;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-head {
+    max-width: none;
+  }
 }
 
 .bottom-head {
   margin: 1rem;
   text-align: center;
-  color: rgb(55, 107, 184);
+  color: #376bb8;
+  max-width: 50%;
+}
+@media (max-width: 415px) {
+  .bottom-head {
+    font-size: 1.2em;
+    max-width: 100%;
+  }
+}
+@media (width: 768px) {
+  .bottom-head {
+    font-size: 1.1em;
+  }
 }
 
 .main-col {
   margin: 0 auto;
   padding: 200px 125px 4em;
   width: 70%;
-  background: url('../images/blue_sky.jpg') no-repeat;
+  background: url("../images/blue_sky.jpg") no-repeat;
   background-color: #bee9fa;
 }
-
 .main-col > p {
   max-width: 75%;
+}
+@media (max-width: 415px) {
+  .main-col {
+    padding: 250px 1.5em 8em;
+    width: 90%;
+  }
+  .main-col > p {
+    max-width: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-col {
+    padding: 309px 3em 4em;
+  }
+  .main-col > p {
+    max-width: none;
+  }
 }
 
 .product-type {
   padding: 1em 125px;
   margin: 0 -125px;
 }
-
 .product-type p {
   max-width: none;
   color: white;
 }
-
 .product-type h2 {
   color: #fd9200;
+}
+.product-type:nth-of-type(2n) {
+  background: #376bb8;
+}
+.product-type:nth-of-type(2n+1) {
+  background: rgba(255, 255, 255, 0.5);
+}
+.product-type:nth-of-type(2n+1) h2 {
+  color: #275bc7;
+}
+.product-type:nth-of-type(2n+1) p {
+  color: #2c5085;
+}
+@media (max-width: 415px) {
+  .product-type {
+    margin: 0 -1.5em;
+    padding: 1em 2em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-type {
+    margin: 0 -3em;
+    padding: 1em 3em;
+  }
 }
 
 .nobreaking {
   white-space: nowrap;
 }
-
-.product-type:nth-of-type(2n) {
-  background: rgb(55, 107, 184);
-}
-
-.product-type:nth-of-type(2n+1) {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.product-type:nth-of-type(2n+1) p {
-  color: rgb(44, 80, 133);
-}
-
-.product-type:nth-of-type(2n+1) h2 {
-  color: #275bc7;
+@media (max-width: 415px) {
+  .nobreaking {
+    white-space: normal;
+  }
 }
 
 .made-in-usa {
@@ -261,6 +469,15 @@ img.dog-bowl {
   float: right;
   margin-right: -62px;
 }
+@media (max-width: 415px) {
+  .product-right {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    width: 75%;
+    padding-bottom: 0;
+  }
+}
 
 .product-left {
   width: 300px;
@@ -268,9 +485,18 @@ img.dog-bowl {
   padding-bottom: 2em;
   margin: 0 2em 0 -50px;
 }
+@media (max-width: 415px) {
+  .product-left {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    width: 75%;
+    padding-bottom: 0;
+  }
+}
 
 .skew-left {
-  transform: rotate(-15deg)
+  transform: rotate(-15deg);
 }
 
 .popup-overlay {
@@ -280,10 +506,16 @@ img.dog-bowl {
 .popup {
   display: block;
   position: absolute;
+  height: 90%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 90%;
+}
+@media (max-width: 415px) {
+  .popup {
+    width: 90%;
+    height: auto;
+  }
 }
 
 .popup-overlay.showing {
@@ -294,7 +526,7 @@ img.dog-bowl {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .social-container {
@@ -318,22 +550,37 @@ img.dog-bowl {
   float: right;
   border-radius: 0 0 1em 1em;
 }
-
 .contact h1 {
-  font: bold 1em 'Montserrat', sans-serif;
+  font: bold 1em "Montserrat", sans-serif;
   margin: 0;
 }
-
 .contact p {
   margin: 0 auto;
 }
-
 .contact.wholesale {
   background: #37b578;
 }
-
 .contact.consumer {
   background: #c49c37;
+}
+@media (max-width: 415px) {
+  .contact {
+    width: auto;
+    float: none;
+    margin-top: 0;
+    position: relative;
+    z-index: 750;
+  }
+  .contact.consumer {
+    margin-top: -2em;
+    padding-top: 2em;
+    z-index: 749;
+  }
+}
+@media (width: 768px) {
+  .contact {
+    width: 22%;
+  }
 }
 
 img.fbook {
@@ -342,227 +589,34 @@ img.fbook {
 }
 
 .fbook-text {
-  font: bold 1em 'Montserrat', sans-serif;
-  color: rgb(100, 100, 100);
+  font: bold 1em "Montserrat", sans-serif;
+  color: #646464;
+}
+@media (max-width: 415px) {
+  .fbook-text {
+    display: block;
+    font-size: 0.9em;
+  }
 }
 
 .wider-area {
   margin: 0 -6em;
 }
-
-/* phones */
-@media(max-width: 500px) {
-
-  .main-col {
-    padding: 12em 1.5em 8em;
-    width: 90%;
-  }
-
-  .sideart {
-    width: 50px;
-  }
-
-  .brand-logo-band {
-    width: 90%;
-  }
-
-  .brand-logo {
-  	position: fixed;
-  	width: 90%;
-    max-width: 460px;
-  	top: 5px;
-  	left: 2%;
-  }
-
-  .main-head {
-    font-size: 1.8em;
-  }
-
-  .main-head, .main-col > p {
-    max-width: none;
-  }
-
-  .duck-promo {
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 2.5em auto 0;
-  width: 100%;
-  max-width: none;
-  padding: 1em;
-  border-radius: 10px 30px 10px 10px;
-  text-align: left;
-}
-
-
-.duck-promo p, .duck-promo button {
-  margin: 0.5em;
-  max-width: 54%;
-}
-
-.duck-promo button {
-  max-width: 65%;
-}
-
-
-.duck-promo .head-image {
-  position: absolute;
-  float: right;
-  right: -35%;
-  left: auto;
-  width: 50%;
-  top: 29%;
-}
-
-
-  .top-nav {
-    width: 100vw;
-    top: 110px;
-    padding: 1.5em 0;
-  }
-
-  img.dog-bowl {
-    width: 120px;
-    bottom: -34px;
-  }
-
-  .top-nav p {
-    font-size: 0.9em;
-    margin: 0 160px 0 auto;
-  }
-
-  .bottom-nav {
-    display: block;
-    height: 125px;
-    background-size: cover;
-    padding-top: 2.5em;
-    text-align: center;
-  }
-
-  .bottom-nav span:first-of-type {
-    display: block;
-    margin: 0.2em auto;
-    text-align: center;
-  }
-
-  .bottom-nav span, .bottom-nav a {
-    display: inline-block;
-    margin: 0 1em;
-  }
-
-  .contact {
-    width: auto;
-    float: none;
-    margin-top: 0;
-    position: relative;
-    z-index: 750;
-  }
-
-  .popup {
-    width: 90%;
-    height: auto;
-  }
-
-  .contact.consumer {
-    margin-top: -2em;
-    padding-top: 2em;
-    z-index: 749;
-  }
-
-  .main-head {
-    text-align: center;
-  }
-
-  .product-type {
-    margin: 0 -1.5em;
-    padding: 1em 2em;
-  }
-
+@media (max-width: 415px) {
   .wider-area {
     margin: 0;
   }
-
-  .nobreaking {
-    white-space: normal;
-  }
-
-  .bottom-head {
-    font-size: 1.2em;
-  }
-
-  .product-right, .product-left {
-    display: block;
-    float: none;
-    margin: 0 auto;
-    width: 75%;
-    padding-bottom: 0;
-  }
-
-  .fbook-text {
-    display: block;
-    font-size: 0.9em;
-  }
-
 }
-
-/* iPads - tablets */
-@media(min-width: 501px) and (max-width: 800px) {
-
-  .duck-promo {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin: 0 auto;
-    width: 100%;
-    max-width: none;
-    padding: 1em;
-    border-radius: 10px 25% 25% 10px;
-    text-align: left;
+@media (width: 768px) {
+  .wider-area {
+    width: 114%;
+    margin: 0 -2em;
   }
-
-
-  .duck-promo p, .duck-promo button {
-    margin: 0.5em;
-    max-width: 54%;
-  }
-
-  .duck-promo button {
-    max-width: 55%;
-  }
-
-  .duck-promo .head-image {
-    position: absolute;
-    float: right;
-    right: -30%;
-    left: auto;
-    width: 50%;
-    top: 45%;
-  }
-
-  .main-col > p, .main-head {
-    max-width: none;
-  }
-
-  .top-nav {
-    padding: 2em 0;
-  }
-
-  .main-col {
-    padding: 300px 3em 0;
-  }
-
-  .product-type {
+}
+@media (width: 1024px) {
+  .wider-area {
     margin: 0 -3em;
-    padding: 1em 3em;
   }
 }
 
-@media(max-width: 1225px) {
-
-  .brand-logo {
-    display: block;
-    margin: 1em auto;
-    float: none;
-  }
-
-}
+/*# sourceMappingURL=styles.css.map */
