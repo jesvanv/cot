@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+
+$tabletScreenMinSize: 768px;
+$tabletScreenMaxSize: 1024px;
+$phoneScreenMaxSize: 415px;
+$iPadLandscape: 1024px;
+$iPadPortrait: 768px;
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ccba93;
+  height: auto;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font: 1em Arial, sans-serif;
+  line-height: 1.6em;
+}
+
+h1, h2 {
+    font-family: Arial, sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.white {
+  color: white;
+}
+
+.cot-blue {
+  color: #3467b8;
+}
+
+.sideart {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 70px;
+  opacity: 0.45;
+
+  @media(max-width: $phoneScreenMaxSize) {
+    width: 50px;
+  }
+
+}
+
+.sideart-left {
+  left: 0;
+  background: url('app/images/sideart-left.png') 0 0/contain repeat-y;
+}
+
+.sideart-right {
+  right: 0;
+  background: url('app/images/sideart-right.png') 100% 0/contain repeat-y;
+}
+
+.brand-logo-band {
+  position: fixed;
+  width: 70%;
+  height: 165px;
+  background: #285cc2;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 800;
+  @media(max-width: $phoneScreenMaxSize) {
+    width: 90%;
+  }
+}
+
+.brand-logo {
+  position: fixed;
+  width: 50%;
+  top: 5px;
+  left: 19%;
+  z-index: 1000;
+  @media(max-width: $phoneScreenMaxSize) {
+    position: fixed;
+    width: 90%;
+    max-width: 460px;
+    top: 5px;
+    left: 2%;
+  }
+
+  @media(max-width: 1225px) {
+      display: block;
+      margin: 1em auto;
+      float: none;
+  }
+}
+
+.promo-callout {
+  position: absolute;
+  right: 230px;
+  top: 345px;
+  width: 15%;
+  max-width: 215px;
+  margin: 1em;
+  padding: 7.5em 0.5em 0.5em;
+  background: #f8eab1;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+
+  .image-one {
+    position: absolute;
+    top: -35%;
+    left: -8%;
+    width: 78%;
+    max-width: 215px;
+    transform: rotate(-10deg);
+  }
+
+  .image-two {
+    position: absolute;
+    top: -19%;
+    left: 25%;
+    width: 80%;
+    max-width: 215px;
+    border-radius: 50%;
+    transform: rotate(10deg);
+  }
+
+  .image-three {
+    max-width: 100%;
+    top: 2.6em;
+    left: 0;
+    position: absolute;
+    border-radius: 5px;
+    transform: rotate(-4deg);
+    box-shadow: 0 0 8px;
+  }
+
+  p {
+    font: 0.9em Arial, sans-serif;
+    color: #41413f;
+    margin: 2.3em 0.5em 1em;
+  }
+
+  button {
+    font: 0.9em 'Montserrat', sans-serif;
+    border: 3px solid #d65a5d;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    color: #FFFFFF;
+    background: #d65a5d;
+
+    a {
+      color: #FFFFFF
+    }
+
+    &:hover {
+      border: 3px solid #FFFFFF;
+      cursor: pointer;
+    }
+  }
+
+    @media(max-width: $tabletScreenMaxSize) {
+
+      position: relative;
+      top: 0;
+      left: 0;
+      max-width: none;
+      padding: 1em;
+      border-radius: 10px 30px 10px 10px;
+      text-align: left;
+      margin: 0 auto 0 0.2em;
+      width: 90%;
+      .image-one {
+        top: -13%;
+        width: 28%;
+        left: 80%;
+        transform: rotate(10deg);
+      }
+      .image-two {
+        top: 3%;
+        width: 30%;
+        left: 57%;
+      }
+      .image-three {
+        max-width: 35%;
+        left: 63%;
+        top: 63%;
+      }
+
+      p, button {
+        margin: 0.5em;
+        max-width: 54%;
+      }
+
+      button {
+        max-width: 55%;
+      }
+    }
+
+    @media(max-width: $phoneScreenMaxSize) {
+      width: 100%;
+      .image-one {
+        top: -7%;
+        width: 44%;
+        left: 65%;
+        transform: rotate(10deg);
+        width: 38%;
+      }
+      .image-two {
+        top: 33%;
+        width: 48%;
+        left: 60%;
+      }
+      .image-three {
+        max-width: 50%;
+        left: 60%;
+        top: 73%;
+      }
+
+    }
+
+    @media(width: $iPadPortrait) {
+      .image-one {
+        left: 80%;
+        transform: rotate(10deg);
+        width: 38%;
+      }
+      .image-two {
+        top: 13%;
+        width: 40%;
+        left: 54%;
+      }
+      .image-three {
+        max-width: 45%;
+        left: 63%;
+        top: 56%;
+      }
+    }
+
+}
+
+
+.nav {
+  display: flex;
+  font: bold 1.1em Arial, sans-serif;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 3em;
+  background: #459945;
+  width: calc(70% + 25px);
+  z-index: 999;
+
+  a {
+    color: white;
+    margin: auto;
+    transition: color 0.2s;
+
+    &:hover {
+      color: orange;
+    }
+  }
+}
+
+.top-nav {
+  position: fixed;
+  align-items: center;
+  top: 160px;
+  padding: 1em 0;
+  border-top: 3px solid #66c366;
+  border-bottom: 3px solid #66c366;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  p {
+    font: bold 1.5em 'Montserrat', sans-serif;
+    width: calc(100% - 200px);
+    text-align: right;
+    text-shadow: 0 0 3px rgba(0,0,0,0.7);
+  }
+
+  @media(max-width: $phoneScreenMaxSize) {
+    width: 100vw;
+    top: 110px;
+    padding: 2.3em 0;
+
+    p {
+      font-size: 0.9em;
+      margin: 0 160px 0 auto;
+    }
+
+  }
+
+  @media(min-width: $tabletScreenMinSize) and (max-width: $tabletScreenMaxSize) {
+    padding: 2em 0;
+  }
+
+  @media(width: $iPadLandscape) {
+    padding: 2.5em 0;
+    p {
+      font-size: 1.35em
+    }
+  }
+
+}
+
+img.dog-bowl {
+  position: absolute;
+  width: 150px;
+  right: 25px;
+  bottom: -42px;
+  @media(max-width: $phoneScreenMaxSize) {
+    width: 120px;
+    bottom: -34px;
+}
+}
+
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  background-color: transparent;
+  background: url('app/images/grass.svg') repeat-x;
+  height: 85px;
+  width: 100vw;
+  z-index: 999;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  align-items: flex-end;
+
+  span, a {
+    margin: 1em auto;
+  }
+
+  @media(max-width: $phoneScreenMaxSize) {
+    display: block;
+    height: 125px;
+    background-size: cover;
+    padding-top: 2.5em;
+    text-align: center;
+
+    span, a {
+      display: inline-block;
+      margin: 0 1em;
+    }
+
+    span:first-of-type {
+      display: block;
+      margin: 0.2em auto;
+      text-align: center;
+    }
+
+  }
+}
+
+.main-head {
+  font: 2.5em 'Montserrat', Arial, sans-serif;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+  max-width: 75%;
+  @media(max-width: $phoneScreenMaxSize) {
+    font-size: 1.8em;
+    max-width: none;
+    text-align: center;
+  }
+
+  @media(min-width: $tabletScreenMinSize) and (max-width: $tabletScreenMaxSize) {
+      max-width: none;
+  }
+}
+
+.bottom-head {
+  margin: 1rem;
+  text-align: center;
+  color: rgb(55, 107, 184);
+  max-width: 50%;
+  @media(max-width: $phoneScreenMaxSize) {
+    font-size: 1.2em;
+    max-width: 100%;
+  }
+  @media(width: $iPadPortrait) {
+    font-size: 1.1em;
+  }
+}
+
+.main-col {
+  margin: 0 auto;
+  padding: 200px 125px 4em;
+  width: 70%;
+  background: url('app/images/blue_sky.jpg') no-repeat;
+  background-color: #bee9fa;
+  > p {
+    max-width: 75%;
+  }
+
+  @media(max-width: $phoneScreenMaxSize) {
+    padding: 250px 1.5em 8em;
+    width: 90%;
+    > p {
+        max-width: none;
+    }
+  }
+  @media(min-width: $tabletScreenMinSize) and (max-width: $tabletScreenMaxSize) {
+      padding: 309px 3em 4em;
+      > p {
+      max-width: none;
+    }
+  }
+}
+
+.product-type {
+  padding: 1em 125px;
+  margin: 0 -125px;
+  p {
+    max-width: none;
+    color: white;
+  }
+  h2 {
+    color: #fd9200;
+  }
+  &:nth-of-type(2n) {
+    background: rgb(55, 107, 184);
+  }
+  &:nth-of-type(2n+1) {
+    background: rgba(255, 255, 255, 0.5);
+    h2 {
+      color: #275bc7;
+    }
+    p {
+      color: rgb(44, 80, 133);
+    }
+  }
+
+  @media(max-width: $phoneScreenMaxSize) {
+    margin: 0 -1.5em;
+    padding: 1em 2em;
+  }
+
+  @media(min-width: $tabletScreenMinSize) and (max-width: $tabletScreenMaxSize) {
+    margin: 0 -3em;
+    padding: 1em 3em;
+  }
+}
+
+.nobreaking {
+  white-space: nowrap;
+  @media(max-width: $phoneScreenMaxSize) {
+      white-space: normal;
+  }
+}
+
+.made-in-usa {
+  width: 80px;
+  margin: 0 auto;
+}
+
+.product-right {
+  width: 300px;
+  float: right;
+  margin-right: -62px;
+  @media(max-width: $phoneScreenMaxSize) {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    width: 75%;
+    padding-bottom: 0;
+  }
+}
+
+.product-left {
+  width: 300px;
+  float: left;
+  padding-bottom: 2em;
+  margin: 0 2em 0 -50px;
+  @media(max-width: $phoneScreenMaxSize) {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    width: 75%;
+    padding-bottom: 0;
+  }
+}
+
+.skew-left {
+  transform: rotate(-15deg)
+}
+
+.popup-overlay {
+  display: none;
+}
+
+.popup {
+  display: block;
+  position: absolute;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media(max-width: $phoneScreenMaxSize) {
+    width: 90%;
+    height: auto;
+  }
+}
+
+.popup-overlay.showing {
+  display: block;
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em auto;
+}
+
+.social-container a {
+  margin: 0 auto;
+}
+
+.contact {
+  font-family: Arial, sans-serif;
+  width: 20%;
+  padding: 0.75em;
+  text-align: center;
+  margin: -1rem 1em 1em;
+  color: white;
+  float: right;
+  border-radius: 0 0 1em 1em;
+
+  h1 {
+    font: bold 1em 'Montserrat', sans-serif;
+    margin: 0;
+  }
+
+  p {
+    margin: 0 auto;
+  }
+
+  &.wholesale {
+    background: #37b578;
+  }
+
+  &.consumer {
+    background: #c49c37;
+  }
+
+  @media(max-width: $phoneScreenMaxSize) {
+    width: auto;
+    float: none;
+    margin-top: 0;
+    position: relative;
+    z-index: 750;
+
+    &.consumer {
+      margin-top: -2em;
+      padding-top: 2em;
+      z-index: 749;
+    }
+  }
+
+  @media(width: $iPadPortrait) {
+    width: 22%;
+  }
+}
+
+img.fbook {
+  width: 45px;
+  margin-right: 1em;
+}
+
+.fbook-text {
+  font: bold 1em 'Montserrat', sans-serif;
+  color: rgb(100, 100, 100);
+  @media(max-width: $phoneScreenMaxSize) {
+      display: block;
+      font-size: 0.9em;
+  }
+}
+
+.wider-area {
+  margin: 0 -6em;
+  @media(max-width: $phoneScreenMaxSize) {
+    margin: 0;
+  }
+  @media(width: $iPadPortrait) {
+    width: 114%;
+    margin: 0 -2em;
+  }
+  @media(width: $iPadLandscape) {
+    margin: 0 -3em;
+  }
+}
