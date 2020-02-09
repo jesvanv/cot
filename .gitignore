@@ -2,3 +2,4 @@
 .DS_Store
 #react-test
 node_modules
+dist
