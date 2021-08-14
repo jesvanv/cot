@@ -103,6 +103,43 @@ h1, h2 {
   }
 }
 
+.new-hire-callout {
+  position: fixed;
+  font: bold 1.1em "Monsteratt", sans-serif;
+  text-align: center;
+  top: 125px;
+  left: 175px;
+  width: 140px;
+  height: 140px;
+  padding: 0.9em;
+  transform: rotate(-15deg);
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 7px solid #088585;
+  z-index: 999;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.new-hire-callout a {
+  color: #088585;
+}
+@media (max-width: 415px) {
+  .new-hire-callout {
+    font: bold 0.8em "Monsteratt", sans-serif;
+    top: 165px;
+    left: 15px;
+    width: 110px;
+    height: 110px;
+    padding: 1em;
+  }
+}
+@media (width: 768px) {
+  .new-hire-callout {
+    top: 204px;
+    left: 75px;
+  }
+}
+
 .promo-callout {
   position: absolute;
   right: 230px;
