@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Button } from 'components/Button'
-
 export const ProductGallery = ({setShowGallery}) => {
     const galleryImages = [
         {
@@ -51,8 +49,10 @@ export const ProductGallery = ({setShowGallery}) => {
     ]
     return (
         <div className='product-gallery'>
-        <Button className={'close-button'} onClick={() => {setShowGallery(false); 
-    document.body.classList.toggle('noscroll', false)}} />
+        <button className={'close-button'} onClick={() => {
+            setShowGallery(false); 
+            document.body.classList.toggle('noscroll', false)
+        }} />
         <div className='gallery-container'>
             { galleryImages.map((imageObj, i) => {
                 return (

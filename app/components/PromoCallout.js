@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Button } from 'components/Button'
 import { addEmailLink } from '../utils/email';
 
 export const PromoCallout = ({ imageArray, text }) => {
@@ -12,9 +11,9 @@ export const PromoCallout = ({ imageArray, text }) => {
     <div className={"promo-callout"}>
       { generatePromoImages() }
       <p>{text}</p>
-      <Button id='promo-button'>
+      <button id='promo-button'>
         {addEmailLink('promo-button')}
-      </Button>
+      </button>
     </div>
   )
 }

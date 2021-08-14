@@ -6,7 +6,6 @@ import { addEmailLink  } from 'utils/email';
 import { products } from 'constants/products';
 
 import { Popup } from 'components/Popup';
-import { Button } from 'components/Button';
 import { PromoCallout } from 'components/PromoCallout';
 import { ProductSection } from 'components/ProductSection';
 import { ProductGallery } from 'components/ProductGallery';
@@ -73,9 +72,9 @@ const IndexPage = () => {
       <div className="sideart sideart-left"></div>
       <div className="sideart sideart-right"></div>
 
-      <Button id='new-hire' className='new-hire-callout'>
+      <button id='new-hire' className='new-hire-callout'>
         { addEmailLink('new-hire') }
-      </Button>
+      </button>
 
       <PromoCallout imageArray={popupImageArray}
                     text={PROMO_TEXT} />
@@ -106,7 +105,7 @@ const IndexPage = () => {
             <div className="wider-area" id="bottom-wide-area">
               {addEmailLink('footer')}
             </div>
-            
+
             <div className="wider-area product-gallery-launcher">
               <button onClick={launchGallery}>Click to see more products...</button>
               </div>
