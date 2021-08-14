@@ -16,7 +16,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
  */
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { SourceMap } = require('module');
 
 /*
  * We've enabled HtmlWebpackPlugin for you! This generates a html
@@ -127,8 +128,9 @@ module.exports = {
 		 constants: path.resolve(__dirname, 'app/constants')
 	 }
  },
+ devtool: 'eval-source-map',
 
 	devServer: {
-		open: true
+		open: true,
 	}
 };

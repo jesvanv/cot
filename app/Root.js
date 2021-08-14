@@ -5,7 +5,7 @@ import IndexPage from './pages/IndexPage'
 const Root = () => {
   return (
     <div id="masterContainer">
-      <IndexPage name={"George"} />
+      <IndexPage />
     </div>
   )
 }
