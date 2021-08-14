@@ -6,6 +6,8 @@ $phoneScreenMaxSize: 415px; // Pixel XL + a bit
 $iPadLandscape: 1024px;
 $iPadPortrait: 768px;
 
+$darkAqua: rgb(8, 133, 133);
+
 * {
   box-sizing: border-box;
 }
@@ -100,6 +102,39 @@ h1, h2 {
       display: block;
       margin: 1em auto;
       float: none;
+  }
+}
+
+.new-hire-callout {
+  position: fixed;
+  font: bold 1.1em "Monsteratt", sans-serif;
+  text-align: center;
+  top: 125px;
+  left: 175px;
+  width: 140px;
+  height: 140px;
+  padding: 0.9em;
+  transform: rotate(-15deg);
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 7px solid $darkAqua;
+  z-index: 999;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  a {
+    color: $darkAqua;
+  }
+  @media(max-width: $phoneScreenMaxSize) {
+    font: bold 0.8em 'Monsteratt', sans-serif;
+    top: 165px;
+    left: 15px;
+    width: 110px;
+    height: 110px;
+    padding: 1em;
+  }
+  @media(width: $iPadPortrait) {
+    top: 204px;
+    left: 75px;
   }
 }
 
@@ -226,7 +261,9 @@ h1, h2 {
         top: 73%;
       }
 
-    }
+
+
+  }
 
     @media(width: $iPadPortrait) {
       .image-one {

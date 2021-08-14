@@ -49,10 +49,11 @@ function addEmailLink(type) {
     break;
     case 'promo-button':
       var promoButton = document.getElementById('promo-button')
-      console.log('render promo email button', promoButton)
-      promoButton.innerHTML = "<a id='email' class='email' href='mailto:" + link + "?subject=Duck Treats Inquiry'>Email Elena today for more details</a>";
+      promoButton.innerHTML = "<a id='promo-email' class='email' href='mailto:" + link + "?subject=Duck Treats Inquiry'>Email Elena today for more details</a>";
     break;
-
+    case 'new-hire': 
+    var newHireButton = document.getElementById('new-hire')
+    newHireButton.innerHTML = "<a id='new-hire-email' class='email' href='mailto:" + link + "?subject=Open Positions Inquiry'>Ask us about open positions!</a>";
   }
 
 }
