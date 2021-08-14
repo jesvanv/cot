@@ -23,7 +23,7 @@ const IndexPage = () => {
 
   const [ showGallery, setShowGallery ] = useState(false);
 
-  const popup = createRef()
+  const popup = createRef(null)
 
   const popupImageArray = [
     {

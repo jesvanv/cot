@@ -9,8 +9,10 @@ export const PromoCallout = ({ imageArray, text }) => {
 
   return (
     <div className={"promo-callout"}>
-      { generatePromoImages() }
-      <p>{text}</p>
+      <img src={'app/images/four_bags_w_chips_peaked.png'} className='single-image' />
+      <p className='promo-callout-text' >{text[0]}</p>
+      <p className='promo-callout-text' >{text[1]}</p>
+      <p className='promo-callout-text' >{text[2]}</p>
       <button id='promo-button'>
         {addEmailLink('promo-button')}
       </button>
