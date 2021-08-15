@@ -29,27 +29,38 @@ const { SourceMap } = require('module');
  */
 
 module.exports = {
-	mode: 'development',
 	entry: './app/index.js',
 
 	output: {
-		filename: 'bundle.js',
+		filename: 'bundle.[contenthash].js',
 		path: path.resolve(__dirname, 'dist')
 	},
 
 	plugins: [
-		new webpack.ProgressPlugin(), new HtmlWebpackPlugin({
+		new webpack.ProgressPlugin(), 
+		new CopyWebpackPlugin([
+			{
+				from: path.join(__dirname, 'app', 'images'),
+				to: path.join(__dirname, 'dist', 'app', 'images'),
+				toType: 'dir'
+			},
+			{
+				from: path.join(__dirname, 'app', 'css', 'styles.css'),
+				to: path.join(__dirname, 'dist', 'app', 'css', 'styles[contenthash].css'),
+				toType: 'file'
+			}
+		], {debug:'debug'}),
+		new MiniCssExtractPlugin({
+			filename: '[name][hash].css',
+			chunkFilename: "[id].css"
+		}),
+		new HtmlWebpackPlugin({
 			inject: true,
 			template: './index.html'
-	}),
-	new CopyWebpackPlugin([
-		{
-		  from: path.join(__dirname, 'app', 'images'),
-		  to: path.join(__dirname, 'dist', 'app', 'images'),
-		  toType: 'dir'
-		}
-	  ], {debug:'debug'})
+		}),
 ],
+
+publicPath: '/css',
 
 	module: {
 		rules: [
@@ -85,21 +96,25 @@ module.exports = {
 					}
 				] 
 			},
+		
 			{
 				test: /\.s[ac]ss$/i,
 				use: [
-				  // Creates `style` nodes from JS strings
-				  'style-loader',
-				  'raw-loader',
-				  // Compiles Sass to CSS
-				  'resolve-url-loader',
-				  {
-					loader: 'sass-loader',
-					options: {
-					  // Prefer `dart-sass`
-					  implementation: require('sass'),
-					}
-				},
+					// Creates `style` nodes from JS strings
+					'raw-loader',
+					process.env.NODE_ENV !== "production"
+					? "style-loader"
+					: MiniCssExtractPlugin.loader,
+					'css-loader',
+					// Compiles Sass to CSS
+					'resolve-url-loader',
+					{
+						loader: 'sass-loader',
+						options: {
+							// Prefer `dart-sass`
+							implementation: require('sass'),
+						},
+					},
 				]
 			}
 		]
@@ -129,7 +144,6 @@ module.exports = {
 	 }
  },
  devtool: 'eval-source-map',
-
 	devServer: {
 		open: true,
 	}

@@ -67,12 +67,12 @@ h1, h2 {
 
 .sideart-left {
   left: 0;
-  background: url('/app/images/sideart-left.png') 0 0/contain repeat-y;
+  background: url('app/images/sideart-left.png') 0 0/contain repeat-y;
 }
 
 .sideart-right {
   right: 0;
-  background: url('/app/images/sideart-right.png') 100% 0/contain repeat-y;
+  background: url('app/images/sideart-right.png') 100% 0/contain repeat-y;
 }
 
 .brand-logo-band {
@@ -412,7 +412,7 @@ img.dog-bowl {
   bottom: 0;
   transform: translate(-50%, 0);
   background-color: transparent;
-  background: url('/app/images/grass.svg') repeat-x;
+  background: url('app/images/grass.svg') repeat-x;
   height: 85px;
   width: 100vw;
   z-index: 999;
@@ -481,7 +481,7 @@ img.dog-bowl {
   width: 70%;
   overflow-x: hidden;
   max-width: $columnMaxWidth;
-  background: url('/app/images/blue_sky.jpg') no-repeat;
+  background: url('app/images/blue_sky.jpg') no-repeat;
   background-color: #bee9fa;
   p {
     max-width: 75%;
