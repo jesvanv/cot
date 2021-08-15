@@ -26,19 +26,20 @@ function addEmailLink(type) {
     var widerArea = document.getElementById('bottom-wide-area')
     var popupOverlay = document.getElementById('popup-overlay');
 
-    var widerAreaContent = "<a href='mailto:" + link + "?subject=Wholesale Inquiry'>" +
+    var widerAreaContent = 
+    "<h2 class='bottom-head'>Chasing Our Tails is committed to giving pets everything they need and crave as a healthy addition to their daily diet!</h2>" + 
+    "<a href='mailto:" + link + "?subject=Wholesale Inquiry'>" +
           "<div class='contact wholesale'>" +
             "<h1>Wholesale inquiries?<h1>" +
             "<p>Let us know!</p>" +
           "</div>" +
         "</a>" +
-
           "<a href='mailto:" + link + "?subject=Customer Inquiry'>" +
           "<div class='contact consumer'>" +
             "<h1>Consumer inquiries?</h1>" +
             "<p>Happy to help!</p>" +
-          "</div>" +
-          "<h2 class='bottom-head'>Chasing Our Tails is committed to giving pets everything they need and crave as a healthy addition to their daily diet!</h2>"
+          "</div>" + 
+          "</a>"
 
     widerArea.innerHTML = widerAreaContent;
 
