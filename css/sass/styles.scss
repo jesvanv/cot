@@ -6,6 +6,9 @@ $phoneScreenMaxSize: 415px; // Pixel XL + a bit
 $iPadLandscape: 1024px;
 $iPadPortrait: 768px;
 
+$maxColumnWidth: 955px;
+$topNavPadding: 25px;
+
 $peach: #d65a5d;
 $darkAqua: rgb(8, 133, 133);
 
@@ -77,7 +80,7 @@ h1, h2 {
 .brand-logo-band {
   position: fixed;
   width: 70%;
-  max-width: 1050px;
+  max-width: $maxColumnWidth;
   height: 165px;
   background: #285cc2;
   left: 50%;
@@ -86,26 +89,25 @@ h1, h2 {
   @media(max-width: $phoneScreenMaxSize) {
     width: 90%;
   }
+  @media only screen and (min-device-width: $iPadPortrait) and (max-device-width: $iPadLandscape) and (orientation: portrait) {
+    width: 80%;
+  }
 }
 
 .brand-logo {
   position: fixed;
-  width: 50%;
-  top: 5px;
-  left: 19%;
+  width: 70%;
+  max-width: 710px;
+  top: -155px;
+  left: 60px;
   z-index: 1000;
   @media(max-width: $phoneScreenMaxSize) {
     position: fixed;
-    width: 90%;
+    width: 85%;
     max-width: 460px;
-    top: 5px;
-    left: 2%;
   }
-
-  @media(max-width: 1225px) {
-      display: block;
-      margin: 1em auto;
-      float: none;
+  @media only screen and (min-device-width: $iPadPortrait) and (max-device-width: $iPadLandscape) and (orientation: portrait) {
+    width: 85%;
   }
 }
 
@@ -113,13 +115,12 @@ h1, h2 {
   position: fixed;
   font: bold 1.1em "Monsteratt", sans-serif;
   text-align: center;
-  top: 93px;
-  left: 175px;
   width: 140px;
   height: 140px;
   padding: 0.9em;
   transform: rotate(-15deg);
   border-radius: 50%;
+  margin: -100px 0 0 -140px;
   background: #FFFFFF;
   border: 7px solid $darkAqua;
   z-index: 999;
@@ -130,15 +131,13 @@ h1, h2 {
   }
   @media(max-width: $phoneScreenMaxSize) {
     font: bold 0.8em 'Monsteratt', sans-serif;
-    top: 152px;
-    left: 4px;
+    margin: -180px 0 0 -40px;
     width: 110px;
     height: 110px;
     padding: 1em;
   }
-  @media(width: $iPadPortrait) {
-    top: 204px;
-    left: 75px;
+  @media only screen and (min-device-width: $iPadPortrait) and (max-device-width: $iPadLandscape) and (orientation: portrait) {
+    margin: -240px 0 0 -90px
   }
 }
 
@@ -221,48 +220,17 @@ h1, h2 {
     }
   }
 
-    @media(max-width: $tabletScreenMaxSize) {
-
+    @media(max-width: $phoneScreenMaxSize) {
       position: relative;
       top: 0;
       left: 0;
       max-width: none;
-      padding: 1em;
-      border-radius: 10px 30px 10px 10px;
       text-align: left;
-      margin: 8em auto 0 0.2em;
+      margin: 0 auto;
       width: 90%;
-      .image-one {
-        top: -13%;
-        width: 28%;
-        left: 80%;
-        transform: rotate(10deg);
-      }
-      .image-two {
-        top: 3%;
-        width: 30%;
-        left: 57%;
-      }
-      .image-three {
-        max-width: 35%;
-        left: 63%;
-        top: 63%;
-      }
-
-      p, button {
-        margin: 0.5em;
-        max-width: 54%;
-      }
-
-      button {
-        max-width: 55%;
-      }
-    }
-
-    @media(max-width: $phoneScreenMaxSize) {
-      width: 100%;
+      padding: 2.5em 1em 1em;
       .single-image {
-        top: -160px;
+        top: -118px;
         width: 140%;
         left: 50%;
         transform: translate(-50%, 0);
@@ -304,7 +272,39 @@ h1, h2 {
 
     }
 
-    @media(width: $iPadPortrait) {
+    @media only screen and (min-device-width: $iPadPortrait) and (max-device-width: $iPadLandscape) and (orientation: portrait) {
+      position: relative;
+      top: 0;
+      left: 0;
+      max-width: none;
+      text-align: left;
+      margin: 0 auto;
+      width: 90%;
+      padding: 3em 1em 1em;
+
+      p.promo-callout-text, button {
+        text-align: center;
+        margin: 0.5em;
+        width: 100%;
+        max-width: none;
+      }
+
+      p.promo-callout-text {
+        &:first-of-type {
+          font-size: 1.2em;
+        }
+      }
+
+      button {
+        margin: 1em auto 0;
+      }
+
+      .single-image {
+        width: 120%;
+        left: 50%;
+        top: -210px;
+        transform: translate(-50%, 0);
+      }
       .image-one {
         left: 80%;
         transform: rotate(10deg);
@@ -353,7 +353,7 @@ h1, h2 {
   align-items: center;
   top: 160px;
   padding: 1em 0;
-  max-width: 1070px;
+  max-width: calc(#{$maxColumnWidth} + #{$topNavPadding});
   border-top: 3px solid #66c366;
   border-bottom: 3px solid #66c366;
   box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
@@ -387,11 +387,18 @@ h1, h2 {
     padding: 2em 0;
   }
 
-  @media(width: $iPadLandscape) {
+  @media only screen and (min-device-width: $iPadPortrait) and (max-device-width: $iPadLandscape) and (orientation: portrait) {
+    width: calc(80% + 25px)
+
+  }
+  @media(device-width: $iPadLandscape) {
     padding: 2.5em 0;
     p {
       font-size: 1.35em
     }
+  }
+
+  @media only screen and (min-device-width: $iPadPortrait) and (max-device-width: $iPadLandscape) and (orientation: portrait) {
   }
 
 }
@@ -445,6 +452,7 @@ img.dog-bowl {
 }
 
 .main-head {
+  position: relative;
   font: 2.5em 'Montserrat', Arial, sans-serif;
   color: white;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
@@ -469,7 +477,7 @@ img.dog-bowl {
     font-size: 1.2em;
     max-width: 100%;
   }
-  @media(width: $iPadPortrait) {
+  @media only screen and (min-device-width: $iPadPortrait) and (max-device-width: $iPadLandscape) and (orientation: portrait) {
     font-size: 1.1em;
   }
 }
@@ -480,7 +488,7 @@ img.dog-bowl {
   padding: 200px 65px 4em;
   width: 70%;
   overflow: hidden;
-  max-width: 1050px;
+  max-width: $maxColumnWidth;
   background: url('../images/blue_sky.jpg') no-repeat;
   background-color: #bee9fa;
   p {
@@ -488,14 +496,15 @@ img.dog-bowl {
   }
 
   @media(max-width: $phoneScreenMaxSize) {
-    padding: 250px 1.5em 8em;
+    padding: 340px 1.5em 8em;
     width: 90%;
     p {
         max-width: none;
     }
   }
-  @media(min-width: $tabletScreenMinSize) and (max-width: $tabletScreenMaxSize) {
-      padding: 309px 3em 4em;
+  @media(device-width: $iPadPortrait){
+      width: 80%;
+      padding: 460px 3em 4em;
       p {
       max-width: none;
     }
@@ -652,15 +661,15 @@ img.dog-bowl {
     position: relative;
     z-index: 750;
 
-    &.consumer {
+    &.wholesale {
       margin-top: -2em;
-      padding-top: 2em;
+      padding-top: 3em;
       z-index: 749;
     }
   }
 
-  @media(width: $iPadPortrait) {
-    width: 22%;
+  @media only screen and (min-device-width: $iPadPortrait) and (max-device-width: $iPadLandscape) and (orientation: portrait) {
+    width: 85%;
   }
 }
 
@@ -686,11 +695,11 @@ img.fbook {
     margin: 0;
     flex-flow: column-reverse;
   }
-  @media(width: $iPadPortrait) {
+  @media only screen and (min-device-width: $iPadPortrait) and (max-device-width: $iPadLandscape) and (orientation: portrait) {
     width: 114%;
     margin: 0 -2em;
   }
-  @media(width: $iPadLandscape) {
+  @media(device-width: $iPadLandscape) {
     margin: 0 -3em;
   }
 }
