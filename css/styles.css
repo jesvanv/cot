@@ -69,7 +69,7 @@ h1, h2 {
 .brand-logo-band {
   position: fixed;
   width: 70%;
-  max-width: 955px;
+  max-width: 1050px;
   height: 165px;
   background: #285cc2;
   left: 50%;
@@ -81,30 +81,28 @@ h1, h2 {
     width: 90%;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  .brand-logo-band {
-    width: 80%;
-  }
-}
 
 .brand-logo {
   position: fixed;
-  width: 70%;
-  max-width: 710px;
-  top: -155px;
-  left: 60px;
+  width: 50%;
+  top: 5px;
+  left: 19%;
   z-index: 1000;
 }
 @media (max-width: 415px) {
   .brand-logo {
     position: fixed;
-    width: 85%;
+    width: 90%;
     max-width: 460px;
+    top: 5px;
+    left: 2%;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1225px) {
   .brand-logo {
-    width: 85%;
+    display: block;
+    margin: 1em auto;
+    float: none;
   }
 }
 
@@ -112,12 +110,13 @@ h1, h2 {
   position: fixed;
   font: bold 1.1em "Monsteratt", sans-serif;
   text-align: center;
+  top: 93px;
+  left: 175px;
   width: 140px;
   height: 140px;
   padding: 0.9em;
   transform: rotate(-15deg);
   border-radius: 50%;
-  margin: -100px 0 0 -140px;
   background: #FFFFFF;
   border: 7px solid #088585;
   z-index: 999;
@@ -130,15 +129,17 @@ h1, h2 {
 @media (max-width: 415px) {
   .new-hire-callout {
     font: bold 0.8em "Monsteratt", sans-serif;
-    margin: -180px 0 0 -40px;
+    top: 152px;
+    left: 4px;
     width: 110px;
     height: 110px;
     padding: 1em;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media (width: 768px) {
   .new-hire-callout {
-    margin: -240px 0 0 -90px;
+    top: 204px;
+    left: 75px;
   }
 }
 
@@ -213,19 +214,48 @@ h1, h2 {
   border: 3px solid #FFFFFF;
   cursor: pointer;
 }
-@media (max-width: 415px) {
+@media (max-width: 1024px) {
   .promo-callout {
     position: relative;
     top: 0;
     left: 0;
     max-width: none;
+    padding: 1em;
+    border-radius: 10px 30px 10px 10px;
     text-align: left;
-    margin: 0 auto;
+    margin: 8em auto 0 0.2em;
     width: 90%;
-    padding: 2.5em 1em 1em;
+  }
+  .promo-callout .image-one {
+    top: -13%;
+    width: 28%;
+    left: 80%;
+    transform: rotate(10deg);
+  }
+  .promo-callout .image-two {
+    top: 3%;
+    width: 30%;
+    left: 57%;
+  }
+  .promo-callout .image-three {
+    max-width: 35%;
+    left: 63%;
+    top: 63%;
+  }
+  .promo-callout p, .promo-callout button {
+    margin: 0.5em;
+    max-width: 54%;
+  }
+  .promo-callout button {
+    max-width: 55%;
+  }
+}
+@media (max-width: 415px) {
+  .promo-callout {
+    width: 100%;
   }
   .promo-callout .single-image {
-    top: -118px;
+    top: -160px;
     width: 140%;
     left: 50%;
     transform: translate(-50%, 0);
@@ -264,35 +294,7 @@ h1, h2 {
     margin-right: auto;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  .promo-callout {
-    position: relative;
-    top: 0;
-    left: 0;
-    max-width: none;
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
-    padding: 3em 1em 1em;
-  }
-  .promo-callout p.promo-callout-text, .promo-callout button {
-    text-align: center;
-    margin: 0.5em;
-    width: 100%;
-    max-width: none;
-  }
-  .promo-callout p.promo-callout-text:first-of-type {
-    font-size: 1.2em;
-  }
-  .promo-callout button {
-    margin: 1em auto 0;
-  }
-  .promo-callout .single-image {
-    width: 120%;
-    left: 50%;
-    top: -210px;
-    transform: translate(-50%, 0);
-  }
+@media (width: 768px) {
   .promo-callout .image-one {
     left: 80%;
     transform: rotate(10deg);
@@ -337,7 +339,7 @@ h1, h2 {
   align-items: center;
   top: 160px;
   padding: 1em 0;
-  max-width: calc(955px + 25px);
+  max-width: 1070px;
   border-top: 3px solid #66c366;
   border-bottom: 3px solid #66c366;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
@@ -369,12 +371,7 @@ h1, h2 {
     padding: 2em 0;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  .top-nav {
-    width: calc(80% + 25px);
-  }
-}
-@media (device-width: 1024px) {
+@media (width: 1024px) {
   .top-nav {
     padding: 2.5em 0;
   }
@@ -382,6 +379,7 @@ h1, h2 {
     font-size: 1.35em;
   }
 }
+
 img.dog-bowl {
   position: absolute;
   width: 150px;
@@ -430,7 +428,6 @@ img.dog-bowl {
 }
 
 .main-head {
-  position: relative;
   font: 2.5em "Montserrat", Arial, sans-serif;
   color: white;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
@@ -461,7 +458,7 @@ img.dog-bowl {
     max-width: 100%;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media (width: 768px) {
   .bottom-head {
     font-size: 1.1em;
   }
@@ -473,7 +470,7 @@ img.dog-bowl {
   padding: 200px 65px 4em;
   width: 70%;
   overflow: hidden;
-  max-width: 955px;
+  max-width: 1050px;
   background: url("../images/blue_sky.jpg") no-repeat;
   background-color: #bee9fa;
 }
@@ -482,17 +479,16 @@ img.dog-bowl {
 }
 @media (max-width: 415px) {
   .main-col {
-    padding: 340px 1.5em 8em;
+    padding: 250px 1.5em 8em;
     width: 90%;
   }
   .main-col p {
     max-width: none;
   }
 }
-@media (device-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .main-col {
-    width: 80%;
-    padding: 460px 3em 4em;
+    padding: 309px 3em 4em;
   }
   .main-col p {
     max-width: none;
@@ -656,15 +652,15 @@ img.dog-bowl {
     position: relative;
     z-index: 750;
   }
-  .contact.wholesale {
+  .contact.consumer {
     margin-top: -2em;
-    padding-top: 3em;
+    padding-top: 2em;
     z-index: 749;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media (width: 768px) {
   .contact {
-    width: 85%;
+    width: 22%;
   }
 }
 
@@ -695,13 +691,13 @@ img.fbook {
     flex-flow: column-reverse;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media (width: 768px) {
   .wider-area {
     width: 114%;
     margin: 0 -2em;
   }
 }
-@media (device-width: 1024px) {
+@media (width: 1024px) {
   .wider-area {
     margin: 0 -3em;
   }
