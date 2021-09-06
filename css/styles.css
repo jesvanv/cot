@@ -71,9 +71,11 @@ h1, h2 {
   width: 70%;
   max-width: 1050px;
   height: 165px;
-  background: #285cc2;
+  background: #0072bc;
   left: 50%;
   transform: translate(-50%, 0);
+  background: url("../images/blue_sky.jpg") top center no-repeat;
+  background-size: cover;
   z-index: 800;
 }
 @media (max-width: 415px) {
@@ -470,8 +472,9 @@ img.dog-bowl {
   padding: 200px 65px 4em;
   width: 70%;
   overflow: hidden;
-  max-width: 1050px;
-  background: url("../images/blue_sky.jpg") no-repeat;
+  max-width: 955px;
+  background: url("../images/blue_sky.jpg") top center no-repeat;
+  background-size: contain;
   background-color: #bee9fa;
 }
 .main-col p {
