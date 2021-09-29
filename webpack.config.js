@@ -38,18 +38,20 @@ module.exports = {
 
 	plugins: [
 		new webpack.ProgressPlugin(), 
-		new CopyWebpackPlugin([
+		new CopyWebpackPlugin({
+			patterns: [
 			{
 				from: path.join(__dirname, 'app', 'images'),
-				to: path.join(__dirname, 'dist', 'app', 'images'),
+				to: 'app/images',
 				toType: 'dir'
 			},
 			{
 				from: path.join(__dirname, 'app', 'css', 'styles.css'),
-				to: path.join(__dirname, 'dist', 'app', 'css', 'styles[contenthash].css'),
+				to: '[hash].css',
 				toType: 'file'
 			}
-		], {debug:'debug'}),
+		]
+	}),
 		new MiniCssExtractPlugin({
 			filename: '[name][hash].css',
 			chunkFilename: "[id].css"
@@ -59,8 +61,6 @@ module.exports = {
 			template: './index.html'
 		}),
 ],
-
-publicPath: '/css',
 
 	module: {
 		rules: [
